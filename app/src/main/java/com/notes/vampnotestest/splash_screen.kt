@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class splash_screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,9 +15,17 @@ class splash_screen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, signup::class.java))
+
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            if (currentUser == null)
+            {
+                startActivity(Intent(this, LoginPage::class.java))
+            }
+            else{
+                startActivity(Intent(this, MainActivity::class.java))
+            }
             finish()
-        },1000)
+        },1500)
 
     }
 }

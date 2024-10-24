@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_url="https://lottie.host/75a26f4e-04b0-4e99-9c51-78cb716c7af3/PZFCxMsRkB.json" />
+        app:lottie_url="https://lottie.host/ba18945a-1465-4bab-bbb3-5d0d250bfe6e/DVo06EJue4.json" />
 
     <TextView
         android:id="@+id/hello_text"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button"
+            android:background="@drawable/login_button"
             android:text="Sign Up" />
 
         <ProgressBar
